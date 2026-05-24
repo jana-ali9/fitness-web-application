@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffd8d8; /* اللون الخلفي للصفحة */
+}
+
+.background-image {
+    width: 90%;
+    height: 100vh;
+    background-image: url('Untitled-2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.text-container {
+    text-align: center;
+    padding-top: 100px; 
+}
+
+.text-container h1, .text-container h2 {
+    margin: 20px 0;
+}
+
+.text-container h1 {
+    color: rgb(228, 159, 159);
+    font-size: 28px;
+    text-shadow: 2px 2px 4px rgba(220, 178, 178, 0.612);
+}
+
+.text-container h2 {
+    color: rgb(228, 159, 159);
+    font-size: 25px;
+    text-shadow: 2px 2px 4px rgba(220, 178, 178, 0.612);
+}
+.text-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: rgb(228, 159, 159);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .main-nav li {
+        margin-left: 0;
+    }
+}

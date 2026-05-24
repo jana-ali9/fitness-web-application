@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excello Fitness</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <?php include 'navigation.html'; ?> 
+    <header>
+        <div class="logo">Excello FITNESS</div>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    </header>
+    <div class="hero-section">
+        <h1>Get ready for change to happen.</h1>
+        <button onclick="window.location.href='login.html'">Login</button>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <a href="#" onclick="showSection('profile')">Profile</a>
+        <a href="#" onclick="showSection('about')">About</a>
+        <a href="#" onclick="showSection('contact')">Contact Us</a>
+        <a href="#" onclick="showSection('logout')">logout</a>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <a href="#profile" onclick="showSection('profile')">Profile</a>
+        <a href="#about" onclick="showSection('about')">About</a>
+        <a href="#contact" onclick="showSection('contact')">Contact Us</a>
+        <a href="#logout" onclick="showSection('logout')">Log Out</a>
+    </div>
+    <div id="profile" class="section">
+        <h2>Profile</h2>
+        <p>information for the profile</p>
+    </div>
+    <div id="about" class="section">
+        <h2>About</h2>
+        <p>Welcome to Excello Fitness! Our mission is to help you achieve your fitness goals through personalized training plans, expert advice, and a supportive community. Whether you're a beginner or an experienced athlete, we have something for everyone. Our state-of-the-art facilities and experienced trainers are here to guide you every step of the way.</p>
+        <h3>Our Story</h3>
+        <p>Founded in 2020, Excello Fitness was born out of a passion for health and wellness. Our founders, Jane and John Doe, envisioned a place where individuals could come together to improve their physical and mental well-being. With a focus on holistic fitness, we offer a variety of classes and programs that cater to all fitness levels.</p>
+        <h3>Our Team</h3>
+        <p>Our team is composed of certified trainers, nutritionists, and wellness coaches who are dedicated to helping you succeed. Meet some of our team members:</p>
+        <ul>
+            <li><strong>Jane Doe</strong> - Head Trainer and Co-founder</li>
+            <li><strong>John Doe</strong> - Nutritionist and Co-founder</li>
+            <li><strong>Emily Smith</strong> - Yoga Instructor</li>
+            <li><strong>Michael Johnson</strong> - Strength Coach</li>
+        </ul>
+    </div>
+    <div id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out to us through any of the following methods:</p>
+        <h3>Email</h3>
+        <p>You can email us at <a href="mailto:info@excellofitness.com">info@excellofitness.com</a> for general inquiries or support@excellofitness.com for customer support.</p>
+        <h3>Phone</h3>
+        <p>Call us at (123) 456-7890. Our support team is available Monday to Friday, 9 AM to 5 PM.</p>
+        <h3>Address</h3>
+        <p>Visit us at:</p>
+        <address>
+            Excello Fitness<br>
+            123 Fitness Lane<br>
+            Fit City, FC 12345
+        </address>
+        <h3>Social Media</h3>
+        <p>Follow us on social media for the latest updates and fitness tips:</p>
+        <ul>
+            <li><a href="https://facebook.com/excellofitness" target="_blank">Facebook</a></li>
+            <li><a href="https://instagram.com/excellofitness" target="_blank">Instagram</a></li>
+            <li><a href="https://twitter.com/excellofitness" target="_blank">Twitter</a></li>
+        </ul>
+    </div>
+    <div id="logout" class="section">
+        <h2>come back as soon as you can ,fitness tracker awaits you </h2>
+    <script src="home.js"></script>
+    <div class="content">
+        <div id="profile" class="section">
+            <h2>Profile</h2>
+            <p>This is the profile section. Here you can manage your personal information, view your fitness progress, and update your settings.</p>
+            <!-- Add more profile-specific content here -->
+        </div>
+        <div id="about" class="section">
+            <h2>About Us</h2>
+            <p>Welcome to Excello Fitness! We are dedicated to helping you achieve your fitness goals with personalized training and nutrition plans.</p>
+            <p>Our team of experts is here to guide you every step of the way. Join us and start your fitness journey today!</p>
+            <!-- Add more about-specific content here -->
+        </div>
+        <div id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need assistance, feel free to reach out to us. We're here to help!</p>
+            <p>Email: support@excello.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <!-- Add more contact-specific content here -->
+        </div>
+        <div id="logout" class="section">
+            <h2>Log Out</h2>
+            <p>You have been logged out. Thank you for visiting Excello Fitness. We hope to see you again soon!</p>
+            <!-- Add more logout-specific content here -->
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+    
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+            var activeSection = document.getElementById(sectionId);
+            activeSection.style.display = 'block';
+            toggleMenu(); // لإخفاء القائمة بعد اختيار القسم
+        }
+    
+        // إخفاء جميع الأقسام عند التحميل الأول
+        window.onload = function() {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+        }
+    </script>
+    
+    
+</body>
+</html>

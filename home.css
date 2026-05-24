@@ -1,0 +1,122 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0eaea;
+    overflow-x: hidden; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: rgb(9, 9, 9); /* تعديل اللون إلى الأبيض ليتناسب مع الخلفية */
+    z-index: 20; /* التأكد من أنها فوق الصورة */
+}
+
+.hero-section {
+    height: 100vh;
+    background: url('sport.png') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-section button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    color: #f2eded;
+    padding-top: 60px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    z-index: 15; /* التأكد من أنها فوق الصورة */
+}
+.sidebar.active {
+    display: block;
+}
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.section {
+    padding: 20px;
+    display: none;
+    margin: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.section h2 {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .main-nav li {
+        margin-left: 0;
+    }
+}

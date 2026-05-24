@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="submit.css">
+</head>
+<body>
+  <?php include 'navigation.html'; ?>
+  <div class="background-image">
+    <div class="text-container">
+        <h1>your data has been saved successfully</h1>
+        <h2>thankyou for your trust in the wellness way</h2>
+        <button type="button" onclick="location.href='exercice.html'">Get Started</button>
+    </div>
+  </div>
+  <script>
+    // أضف مستمع الحدث للزر بعد تحميل الصفحة
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('getStartedButton').addEventListener('click', function() {
+        // توجيه المستخدم إلى صفحة التمارين
+        window.location.href = 'exercice.html';
+      });
+    });
+  </script>
+</body>
+</html>

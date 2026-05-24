@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2cfcf;
+    margin: 0;
+}
+
+.container {
+    background: url('Untitled-1.png') no-repeat center center/cover;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 400px;
+    position: relative;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background: rgba(251, 216, 216, 0.8); /* جعل الخلفية شفافة قليلاً */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #333; /* لون النص */
+}
+
+input, select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fce7cde8;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f7a477;
+}
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .main-nav li {
+        margin-left: 0;
+    }
+}

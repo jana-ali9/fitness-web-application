@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Way</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
+        .navbar {
+            flex: 1;
+            max-width: 200px;
+            background-color: #ff7f7f;
+            padding: 10px;
+        }
+        .navbar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+        }
+        .navbar a:hover {
+            background-color: #ff4f4f;
+        }
+        .content {
+            flex: 3;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" onclick="showContent('exercises')">Exercises</a>
+        <a href="#" onclick="showContent('nutrition')">Nutrition</a>
+        <a href="#" onclick="showContent('schedule')">Weekly Schedule</a>
+        <a href="#" onclick="showContent('tips')">Tips & Articles</a>
+        <a href="#" onclick="showContent('resources')">Additional Resources</a>
+    </div>
+
+    <div class="content" id="content">
+        <h2>Welcome to Wellness Way</h2>
+        <p>Select a section from the navigation bar to see its content.</p>
+    </div>
+
+    <script>
+        function showContent(section) {
+            let content = '';
+            if (section === 'exercises') {
+                content = `
+                    <h2>Exercises</h2>
+                    <div class="exercise-list">
+                        <h3>Basic Exercises</h3>
+                        <ul>
+                            <li>Push-ups: 3 sets of 10 reps</li>
+                            <li>Squats: 3 sets of 15 reps</li>
+                            <li>Plank: 3 sets of 1 minute</li>
+                        </ul>
+                    </div>
+                    <div class="exercise-list">
+                        <h3>Advanced Exercises</h3>
+                        <ul>
+                            <li>Pull-ups: 3 sets of 8 reps</li>
+                            <li>Lunges: 3 sets of 12 reps per leg</li>
+                            <li>Burpees: 3 sets of 15 reps</li>
+                        </ul>
+                    </div>`;
+            } else if (section === 'nutrition') {
+                content = `
+                    <h2>Nutrition</h2>
+                    <div class="nutrition-list">
+                        <h3>Healthy Eating Tips</h3>
+                        <ul>
+                            <li>Eat a variety of foods</li>
+                            <li>Include plenty of fruits and vegetables in your diet</li>
+                            <li>Reduce your intake of sugar and saturated fats</li>
+                        </ul>
+                    </div>
+                    <div class="nutrition-list">
+                        <h3>Sample Meal Plan</h3>
+                        <ul>
+                            <li>Breakfast: Oatmeal with berries and nuts</li>
+                            <li>Lunch: Grilled chicken salad with a variety of veggies</li>
+                            <li>Dinner: Baked salmon with quinoa and steamed broccoli</li>
+                            <li>Snacks: Fresh fruit, yogurt, and mixed nuts</li>
+                        </ul>
+                    </div>`;
+            } else if (section === 'schedule') {
+                content = `
+                    <h2>Weekly Schedule</h2>
+                    <p>Here is your weekly schedule based on your goals:</p>
+                    <!-- Add content related to weekly schedule -->`;
+            } else if (section === 'tips') {
+                content = `
+                    <h2>Tips & Articles</h2>
+                    <p>Here are some tips and articles to help you on your wellness journey:</p>
+                    <!-- Add content related to tips and articles -->`;
+            } else if (section === 'resources') {
+                content = `
+                    <h2>Additional Resources</h2>
+                    <p>Here are some additional resources to help you:</p>
+                    <!-- Add content related to additional resources -->`;
+            }
+            document.getElementById('content').innerHTML = content;
+        }
+    </script>
+</body>
+</html>

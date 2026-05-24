@@ -1,0 +1,22 @@
+<!-- navigation.html -->
+<div class="navbar">
+    <span class="navbar-toggle" id="js-navbar-toggle">
+        ☰
+    </span>
+    <a href="#" class="logo">Fitness Tracker</a>
+    <ul class="main-nav" id="js-menu">
+        <li><a href="profile.php" class="nav-links">Profile</a></li>
+        <li><a href="about.html" class="nav-links">About</a></li>
+        <li><a href="contact.html" class="nav-links">Contact Us</a></li>
+        <li><a href="logout.php" class="nav-links">Log Out</a></li>
+    </ul>
+</div>
+
+<script>
+    let mainNav = document.getElementById('js-menu');
+    let navBarToggle = document.getElementById('js-navbar-toggle');
+
+    navBarToggle.addEventListener('click', function () {
+        mainNav.classList.toggle('active');
+    });
+</script>
